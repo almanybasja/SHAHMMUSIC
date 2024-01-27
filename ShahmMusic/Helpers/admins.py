@@ -20,7 +20,7 @@ def admin_check(func: Callable) -> Callable:
         check = await app.get_chat_member(message.chat.id, message.from_user.id)
         if check.status not in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
             return await message.reply_text(
-                "⌔︙ انت لست ادمن اكعد وانجب لتلعب."
+                "⌔︙انته مش ادمن يحليتها بطل لعب ."
             )
 
         admin = (
@@ -52,7 +52,7 @@ def admin_check_cb(func: Callable) -> Callable:
             return
         if check.status not in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
             return await query.answer(
-                "⌔︙ انت لست مشرف ",
+                "⌔︙ انت لست ادمن ",
                 show_alert=True,
             )
 
