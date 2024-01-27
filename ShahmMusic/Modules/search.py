@@ -16,16 +16,16 @@ async def ytsearch(_, message: Message):
         if len(message.command) < 2:
             return await message.reply_text("⌔︙ اكتب شي تريد تبحث علي")
         query = message.text.split(None, 1)[1]
-        m = await message.reply_text("⌔︙ جارٍ البحث...")
+        m = await message.reply_text("جاري البحث ..🚦")
         results = YoutubeSearch(query, max_results=4).to_dict()
         i = 0
         text = ""
         while i < 4:
-            text += f"⌔︙ العنوان : {results[i]['title']}\n"
-            text += f"⌔︙ المدة : `{results[i]['duration']}`\n"
-            text += f"⌔︙ المشاهدات : `{results[i]['views']}`\n"
-            text += f"⌔︙ القناه : {results[i]['channel']}\n"
-            text += f"⌔︙ الرابط : https://youtube.com{results[i]['url_suffix']}\n\n"
+            text += f"⌔︙ العـنوان : {results[i]['title']}\n"
+            text += f"⌔︙ المـدة : `{results[i]['duration']}`\n"
+            text += f"⌔︙ المـشاهدات : `{results[i]['views']}`\n"
+            text += f"⌔︙ القـناه : {results[i]['channel']}\n"
+            text += f"⌔︙ الـرابط : https://youtube.com{results[i]['url_suffix']}\n\n"
             i += 1
         key = InlineKeyboardMarkup(
             [
