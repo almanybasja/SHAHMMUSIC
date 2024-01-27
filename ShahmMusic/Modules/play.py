@@ -44,7 +44,7 @@ from ShahmMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
     & ~filters.via_bot
 )
 async def play(_, message: Message):
-    Shahm = await message.reply_text("** جاري التشغيل...**")
+    Shahm = await message.reply_text("** جاري التشغيل انتظر قليلاً ..🚦 **")
     try:
         await message.delete()
     except:
@@ -55,7 +55,7 @@ async def play(_, message: Message):
             get = await app.get_chat_member(message.chat.id, ASS_ID)
         except ChatAdminRequired:
             return await Shahm.edit_text(
-                f"  ** اعطني صلاحية الاضافة ليتم اضافة المساعد** {BOT_NAME} ** وحاول مرة اخرى {message.chat.title}."
+                f"  ** اديني صلاحية الاضافة علشان اضيف المساعد** {BOT_NAME} ** وحاول مرة اخرى {message.chat.title}."
             )
         if get.status == ChatMemberStatus.BANNED:
             unban_butt = InlineKeyboardMarkup(
@@ -69,7 +69,7 @@ async def play(_, message: Message):
                 ]
             )
             return await Shahm.edit_text(
-                text=f"⌔︙ {BOT_NAME} الحساب المساعد محظور في {message.chat.title}\n\n⌔︙ الايدي : `{ASS_ID}`\n⌔︙ آلآسم : {ASS_MENTION}\n⌔︙ اليوزر : @{ASS_USERNAME}\n\n⌔︙ الغي حظر الحساب المساعد...",
+                text=f"⌔︙ {BOT_NAME} الحساب المساعد محظور في {message.chat.title}\n\n⌔︙ ايـدهـك : `{ASS_ID}`\n⌔︙ اسـمـك : {ASS_MENTION}\n⌔︙ الـيوزر : @{ASS_USERNAME}\n\n⌔︙ الغي حظر الحساب المساعد...",
                 reply_markup=unban_butt,
             )
     except UserNotParticipant:
