@@ -1,7 +1,7 @@
 {
     "name": "بوت ميوزك مجاني",
-    "description": "سورس ميوزك شهم مجااني للكل تحياتي الكم عمكم شهم",
-    "logo": "https://telegra.ph/file/b10a558220339572d7f42.jpg",
+    "description": "سورس ميوزك الالماني للكل تحياتي الكم عمكم شهم",
+    "logo": "https://telegra.ph/file/6bde58905aab417af89b6.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -43,7 +43,7 @@
       },
       "SUPPORT_CHAT": {
         "description": "ضـع رابـط جـروب الـدعـم",
-        "value": "https://t.me/Shahm_Sport",
+        "value": "https://t.me/+_M6OxCDXaC0wN2U0",
         "required": false
       }
     },
